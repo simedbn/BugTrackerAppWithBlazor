@@ -1,4 +1,5 @@
-﻿<h3>All Bugs</h3>
+﻿@inherits BugListComponent
+<h3>All Bugs</h3>
 
 <table>
     <thead>
@@ -20,15 +21,3 @@
         </tr>
     }
 </table>
-
-@code{
-    [Inject]
-    public IBugService BugService { get; set; }
-
-    public List<Bug> Bugs { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Bugs = BugService.GetBugs().OrderBy(x => x.Priority).ToList();
-    }
-}

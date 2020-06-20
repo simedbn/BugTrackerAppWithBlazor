@@ -1,5 +1,5 @@
 ﻿@page "/new-bug"
-
+@inherits NewBugComponent
 <h3>Add new Bug</h3>
 
 
@@ -16,20 +16,3 @@
 
     <button type="submit">Add Bug</button>
 </EditForm>
-
-@code {
-
-    [Inject]
-    public IBugService BugService { get; set; }
-
-    [Inject]
-    public NavigationManager NavService { get; set; }
-
-    public Bug AddBug { get; set; } = new Bug();
-
-    protected void HandleValidSubmit()
-    {
-        BugService.AddBug(AddBug);
-        NavService.NavigateTo("");
-    }
-}
