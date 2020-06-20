@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29311.281
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BugTrackerUI", "BugTrackerUI\BugTrackerUI.csproj", "{45A48647-C5CD-4BB4-AF04-2FDD5DEE4597}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTrackerUI.Wasm", "BugTrackerUI.Wasm\BugTrackerUI.Wasm.csproj", "{3A1D350A-5D45-4A0F-99CE-CD73F08E4DE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugTracker.Shared", "BugTracker.Shared\BugTracker.Shared.csproj", "{25758AC5-7D7A-4BDA-B5E4-1601258F4893}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{45A48647-C5CD-4BB4-AF04-2FDD5DEE4597}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A48647-C5CD-4BB4-AF04-2FDD5DEE4597}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A48647-C5CD-4BB4-AF04-2FDD5DEE4597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A1D350A-5D45-4A0F-99CE-CD73F08E4DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A1D350A-5D45-4A0F-99CE-CD73F08E4DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A1D350A-5D45-4A0F-99CE-CD73F08E4DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A1D350A-5D45-4A0F-99CE-CD73F08E4DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25758AC5-7D7A-4BDA-B5E4-1601258F4893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25758AC5-7D7A-4BDA-B5E4-1601258F4893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25758AC5-7D7A-4BDA-B5E4-1601258F4893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25758AC5-7D7A-4BDA-B5E4-1601258F4893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

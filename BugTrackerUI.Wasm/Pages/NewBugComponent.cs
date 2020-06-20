@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BugTrackerUI.Pages
+namespace BugTrackerUI.Wasm.Pages
 {
     /// <summary>
     /// The new bug component class.

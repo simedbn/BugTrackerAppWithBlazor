@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BugTrackerUI
+namespace BugTracker.Shared.Services
 {
     public interface IBugService
     {

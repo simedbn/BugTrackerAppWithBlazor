@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BugTrackerUI.Pages
+namespace BugTrackerUI.Wasm.Components
 {
     /// <summary>
-    /// The new bug component class.
+    /// The bug list component class.
     /// </summary>
     /// <seealso cref="Microsoft.AspNetCore.Components.ComponentBase" />
-    public class NewBugComponent : ComponentBase
+    public class BugListComponent : ComponentBase
     {
         /// <summary>
         /// Gets or sets the bug service.
@@ -24,29 +24,20 @@ namespace BugTrackerUI.Pages
         public IBugService BugService { get; set; }
 
         /// <summary>
-        /// Gets or sets the nav service.
+        /// Gets or sets the bugs.
         /// </summary>
         /// <value>
-        /// The nav service.
+        /// The bugs.
         /// </value>
-        [Inject]
-        public NavigationManager NavService { get; set; }
+        public List<Bug> Bugs { get; set; }
 
         /// <summary>
-        /// Gets or sets the add bug.
+        /// Method invoked when the component is ready to start, having received its
+        /// initial parameters from its parent in the render tree.
         /// </summary>
-        /// <value>
-        /// The add bug.
-        /// </value>
-        public Bug AddBug { get; set; } = new Bug();
-
-        /// <summary>
-        /// Handles the valid submit.
-        /// </summary>
-        protected void HandleValidSubmit()
+        protected override void OnInitialized()
         {
-            BugService.AddBug(AddBug);
-            NavService.NavigateTo("");
+            Bugs = BugService.GetBugs().OrderBy(x => x.Priority).ToList();
         }
     }
 }
